@@ -1,17 +1,22 @@
-.side-nav-bar-container{
+.side-nav-bar-container {
     display: flex;
     align-items: center;
     width: 7vw;
     height: 100vh;
-    background-color: aliceblue;
-    position: fixed;
-    top: 0;
-    left: 0;
-    ul{
-        li{
+    //background-color: aliceblue;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    ul {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        li {
             height: 4rem;
             list-style: none;
+            svg {
+                color: aquamarine;
+            }
         }
-        
     }
 }

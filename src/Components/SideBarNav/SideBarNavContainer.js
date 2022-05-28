@@ -7,17 +7,18 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import SideBarIcon from "./SideBarIcon";
 
 const SideBarNavContainer = () => {
     return (
         <div className="side-nav-bar-container">
-            <ul>
-                <li><MailOutlineIcon color='disabled' /></li>
-                <li><NotificationsNoneIcon color='disabled' /></li>
-                <li><GridViewIcon color='disabled' /></li>
-                <li><AutorenewIcon color='disabled' /></li>
-                <li><TrendingUpIcon color='disabled' /></li>
-                <li><SettingsOutlinedIcon color='disabled' /></li>           
+            <ul> <SideBarIcon iconName={<MailOutlineIcon/>} badge={false}/>
+                <li><MailOutlineIcon color='disabled' fontSize="medium" /></li>
+                <li><NotificationsNoneIcon color='disabled' fontSize="medium"/></li>
+                <li><GridViewIcon color='disabled' fontSize="medium"/></li>
+                <li><AutorenewIcon color='disabled' fontSize="medium" /></li>
+                <li><TrendingUpIcon color='disabled' fontSize="medium" /></li>
+                <li><SettingsOutlinedIcon color='disabled' fontSize="medium" /></li>           
             </ul>
         </div>
     );
