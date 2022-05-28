@@ -1,13 +1,10 @@
-
-import './App.css';
+import "./App.scss";
+import SideBarNavContainer from "./Components/SideBarNav/SideBarNavContainer";
 
 function App() {
-  return (
-    <div className="App">
-     Digi- Wallet
-     
-    </div>
-  );
+    return <>
+    <SideBarNavContainer />
+    </>;
 }
 
 export default App;
