@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useState } from "react";
 
-const TransTableProfile = () => {
-  return (
-    <div className='trans-table-profile'>
-        <div className='profile-image'>
-            <img src="" alt="" />
+const TransTableProfile = ({ name, mail }) => {
+    const [userName, setUserName] = useState(name);
+    const [userEmail, setUserEmail] = useState(mail);
+    return (
+        <div className="trans-table-profile">
+            <div className="profile-image">
+                <img src="" alt="" />
+            </div>
+            <div className="profile-name-mail-container">
+                <p className="profile-name">{userName}</p>
+                <p className="profile-mail">{userEmail}</p>
+            </div>
         </div>
-        <div className='profile-name-mail-container'>
-            <p className='profile-name'> Lucas Ameata</p>
-            <p className='profile-mail'>lucasamita@mail.com</p>
-        </div>
-    </div>
-  )
-}
+    );
+};
 
-export default TransTableProfile
+export default TransTableProfile;

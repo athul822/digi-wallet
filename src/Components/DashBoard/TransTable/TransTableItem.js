@@ -4,14 +4,15 @@ import DateView from '../DateView/DateView'
 import StatusView from '../StatusView/StatusView'
 import TransTableProfile from './TransTableProfile'
 
-const TransTableItem = () => {
- 
+
+const TransTableItem = ({user}) => {
+ console.log(user);
   return (
     <div className='trans-table-item-container'>
-        <TransTableProfile />
-        <CostAndTrend cost={238} trend={true} />
-        <StatusView progress={'Sent'} />
-        <DateView date={"2019-01-17 10:34:23"} />
+        <TransTableProfile name={user.username} mail={user.email} />
+        <CostAndTrend costAmount={user.cost} trend={true} />
+        <StatusView progress={user.progress} />
+        <DateView date={user.date} />
     </div>
   )
 }

@@ -5,7 +5,7 @@ import "./CostAndTrend.scss";
 import styled from "@emotion/styled";
 
 const CostAndTrend = ({ costAmount, trend }) => {
-    const [cost, setCost] = useState(500); 
+    const [cost, setCost] = useState(costAmount);
     const Span = styled.span`
         color: ${trend ? "#09B66D" : "#FF3D57"};
         margin-right: 6px;
@@ -19,7 +19,6 @@ const CostAndTrend = ({ costAmount, trend }) => {
                     </span>
                 ) : (
                     <span className="trend-down">
-                       
                         <TrendingDownIcon />
                     </span>
                 )}

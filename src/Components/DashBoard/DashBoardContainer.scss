@@ -1,21 +1,44 @@
-.bank-cards-container{
+.bank-cards-container {
     display: flex;
     justify-content: space-between;
 }
-.tab-header{
+.tab-header {
     margin-bottom: 1rem;
 }
-.trans-container{
+.trans-container {
     width: 46vw;
 }
-.trans-header-container{
+.trans-header-container {
     margin-bottom: 1rem;
 }
-.trans-chart-container{
+.trans-table-container {
+   
+    margin-right: 1rem;
+    height: 40vh;
+    /* overflow: hidden; */
+    overflow-y: scroll;
+}
+.trans-chart-container {
+    
+    height: 40vh;
     display: flex;
     //background-color: antiquewhite;
     justify-content: space-between;
 }
-.chart-container{
-    width:38vw;
+.chart-container {
+    width: 38vw;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    //background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import './DateView.scss'
+
 
 
 const DateView = ({ date }) => {
@@ -18,10 +20,10 @@ const DateView = ({ date }) => {
     const [dateToShow, setDateToShow] = useState(formatDate(date));
     return (
         <div className="date-view-container">
-            <span>
+            <span className="date-icon">
                 <CalendarTodayIcon fontSize="small" />
             </span>
-            <span>{dateToShow}</span>
+            <span className="date-text">{dateToShow}</span>
         </div>
     );
 };

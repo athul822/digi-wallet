@@ -1,25 +1,25 @@
-.layout{
-    // display: flex;
-    // width: 100vw;
-}
-.container{
+.layout {
     display: flex;
-    background-color:#F2F5FA;
+    width: 100%;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    background-color: #f2f5fa;
     max-width: 1344px;
     height: 100%;
     align-self: center;
-    
 }
-.header-page-container{
+.header-page-container {
     width: 100%;
     padding-right: 2.5vw;
 }
-.header-bar-container{
+.header-bar-container {
     //padding-right: 2.5vw;
 }
-.page-view-container{
+.page-view-container {
     height: calc((100vh - 9.29vh) - 6.3vh);
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 14px;
     padding: 1rem 2rem;
 }

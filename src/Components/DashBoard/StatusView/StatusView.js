@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 
 const StatusView = ({ progress }) => {
-    const [status, setStatus] = useState();
+    const [status, setStatus] = useState(progress);
 
     const handleStyle = (stat) => {
         switch (stat) {
@@ -31,7 +31,7 @@ const StatusView = ({ progress }) => {
 
     return (
         <div>
-            <Span className="status-text">Sent</Span>
+            <Span className="status-text">{status}</Span>
         </div>
     );
 };
