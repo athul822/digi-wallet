@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
+
 .bank-card-container {
     color: #FCFDFF;
     border-radius: 12px;
@@ -35,4 +37,12 @@
     p {
         font-weight: 400;
     }
+}
+
+.chip{
+    height: 36px;
+    width: 46px;
+    background-color: #FFCA3F;
+    border-radius: 8px;
+    margin: 6px 0;
 }

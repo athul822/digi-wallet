@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F8F8F8;
+    background-color: #FFFFFF;
     padding: 10px 8px;
     overflow: hidden;
+   
     .trans-table-profile{
         display: flex;
         align-items: center;
+        width: 15%;
         .profile-name-mail-container{
             margin-left: 12px;
         }
@@ -30,3 +32,6 @@
         }
     }
 }
+.trans-table > div:nth-child(odd) {
+    background-color:#F8F8F8;
+   }

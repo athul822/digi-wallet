@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
+import './StatusView.scss'
 
 const StatusView = ({ progress }) => {
     const [status, setStatus] = useState(progress);
@@ -30,7 +31,7 @@ const StatusView = ({ progress }) => {
     `;
 
     return (
-        <div>
+        <div className="status-view-cont">
             <Span className="status-text">{status}</Span>
         </div>
     );

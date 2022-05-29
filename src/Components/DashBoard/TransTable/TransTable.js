@@ -16,7 +16,7 @@ const TransTable = () => {
     return (
         <div className="trans-table">
             {userData.map((item, index) => {
-                return index < 5 ? <TransTableItem user={item} /> : <></>;
+                return index < 5 ? <TransTableItem key={index} user={item} /> : <></>;
             })}
         </div>
     );

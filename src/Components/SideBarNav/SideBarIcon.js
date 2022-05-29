@@ -9,6 +9,7 @@ const SideBarIcon = ({ iconName, badge }) => {
             <Badge color="secondary" variant="dot" invisible={!badge}>
                 {iconName}
             </Badge>
+           
         </div>
     );
 };

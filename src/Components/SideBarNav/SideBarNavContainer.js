@@ -31,10 +31,13 @@ const SideBarNavContainer = () => {
                         <SideBarIcon iconName={icons.notification} badge={true} />
                     </li>
                 </Link>
+
                 <Link to="/">
-                    <li>
-                        <SideBarIcon iconName={icons.grid} badge={false} />
-                    </li>
+                    <div className="active">
+                        <li>
+                            <SideBarIcon iconName={icons.grid} badge={false} />
+                        </li>
+                    </div>
                 </Link>
                 <Link to="/transactions">
                     <li>

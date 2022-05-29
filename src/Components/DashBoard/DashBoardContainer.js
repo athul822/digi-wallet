@@ -12,7 +12,7 @@ const DashBoardContainer = () => {
                 <TabHeader header="Dashboard" />
             </div>
             <div className="bank-cards-container">
-                <BankCard color={{ color1: "#1A7579", color2: "#151515" }} header={"DEBIT CARD"} />
+                <BankCard color={{ color1: "#1A7579", color2: "#151515" }} header={"DEBIT CARD"} debitCard/>
                 <BankCard color={{ color1: "#1A7579", color2: "#151515" }} header={"Spent"} amount={23250} />
                 <BankCard color={{ color1: "#791A1A", color2: "#151515" }} header={"Balance"} amount={125610} />
             </div>

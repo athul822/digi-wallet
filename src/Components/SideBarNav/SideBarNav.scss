@@ -21,13 +21,37 @@
             justify-content: center;
             align-items: center;
             svg {
-                color: #8291A9;
+                color: #8291a9;
             }
-           
         }
-        li:hover{
-            cursor: pointer;
+        .active {
+            .top-curve,
+            .bottom-curve {
+                position: relative;
+                left: 0;
+                width: 7vw;
+                height: 20px;
+                background-color: red;
+            }
+            .top-curve {
+                top: -20px;
+            }
+            .bottom-curve {
+                bottom: -20px;
+            }
+            li {
+                background-color: white;
 
-        } 
+                svg {
+                    color: #1f54a3;
+                }
+            }
+        }
+        li:hover {
+            cursor: pointer;
+            svg {
+                color: #1f54a3;
+            }
+        }
     }
 }
