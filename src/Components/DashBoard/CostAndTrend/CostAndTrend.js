@@ -14,11 +14,11 @@ const CostAndTrend = ({ costAmount, trend }) => {
         <div className="cost-trend-container">
             <Span>
                 {trend ? (
-                    <span className="trend-up">
+                    <span className="trend">
                         <TrendingUpIcon fontSize="small" />
                     </span>
                 ) : (
-                    <span className="trend-down">
+                    <span className="trend">
                         <TrendingDownIcon />
                     </span>
                 )}

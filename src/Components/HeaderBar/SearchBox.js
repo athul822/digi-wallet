@@ -5,7 +5,7 @@ import SearchIcon from './SearchIcon'
 const SearchBox = () => {
   return (
     <div className='search-box-container'>
-        <input type="text" />
+        <input type="text" placeholder='Search' />
         <div className='search-icon-container'>
             <SearchIcon />
         </div>

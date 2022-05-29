@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import SideBarNavContainer from "./Components/SideBarNav/SideBarNavContainer";
 import HeaderBar from "./Components/HeaderBar/HeaderBar";
 import "./App.scss";
@@ -14,7 +15,14 @@ const App = () => {
                     <HeaderBar />
                 </div>
                 <div className="page-view-container">
-                    <DashBoardPage />
+                    <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<DashBoardPage />} />
+                        
+                    
+                    </Routes>
+                    </BrowserRouter>
+                   
                 </div>
             </div>
         </div>
