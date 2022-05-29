@@ -4,9 +4,9 @@ import TabHeader from "../Components/TabHeader/TabHeader";
 
 const DashBoardPage = () => {
     return (
-        <>
+       
             <DashBoardContainer />
-        </>
+      
     );
 };
 

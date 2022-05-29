@@ -1,7 +1,6 @@
 import React from "react";
 import "./ChartView.scss";
 import { Line } from "react-chartjs-2";
-
 import Chart from "chart.js/auto";
 const ChartView = () => {
     const chartData = {
@@ -14,6 +13,7 @@ const ChartView = () => {
                 borderColor: ["#EF90D3"],
                 borderWidth: 1.5,
                 backgroundColor: ["rgba(239, 144, 211, 01)"],
+                pointBackgroundColor:["rgba(239, 148, 100, 01)"]
             },
             {
                 tension: 0.4,

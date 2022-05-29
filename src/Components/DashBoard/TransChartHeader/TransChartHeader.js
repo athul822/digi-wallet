@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import './TransChartHeader.scss'
 
 const TransChartHeader = ({header}) => {
-    const [filterValue, setFilterValue] = useState("");
+    const [filterValue, setFilterValue] = useState("daily");
     const handleChange = (e) =>{
         setFilterValue(e.target.value)
     }
@@ -15,7 +15,6 @@ const TransChartHeader = ({header}) => {
                     <option value="daily">Daily</option>
                     <option value="weekly">Weekly</option>
                     <option value="monthly">Monthly</option>
-                    <option value="yearly">Yearly</option>
                 </select>
             </div>
         </div>

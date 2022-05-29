@@ -1,12 +1,12 @@
 .layout {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: center;
 }
 .container {
     display: flex;
     background-color: #f2f5fa;
-    max-width: 1344px;
+    //width: 1344px;
     height: 100%;
     align-self: center;
 }
@@ -15,6 +15,7 @@
     padding-right: 2.5vw;
 }
 .header-bar-container {
+    width: calc(100vw - 7vw - 2.5vw);
     //padding-right: 2.5vw;
 }
 .page-view-container {
