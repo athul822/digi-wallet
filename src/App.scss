@@ -1,8 +1,13 @@
+.layout{
+    // display: flex;
+    // width: 100vw;
+}
 .container{
     display: flex;
     background-color:#F2F5FA;
-    width: 100%;
+    max-width: 1344px;
     height: 100%;
+    align-self: center;
     
 }
 .header-page-container{
@@ -15,5 +20,6 @@
 .page-view-container{
     height: calc((100vh - 9.29vh) - 6.3vh);
     background-color: #FFFFFF;
-    border-radius: 18px;
+    border-radius: 14px;
+    padding: 1rem 2rem;
 }

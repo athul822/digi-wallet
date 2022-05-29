@@ -1,0 +1,21 @@
+.bank-cards-container{
+    display: flex;
+    justify-content: space-between;
+}
+.tab-header{
+    margin-bottom: 1rem;
+}
+.trans-container{
+    width: 46vw;
+}
+.trans-header-container{
+    margin-bottom: 1rem;
+}
+.trans-chart-container{
+    display: flex;
+    //background-color: antiquewhite;
+    justify-content: space-between;
+}
+.chart-container{
+    width:38vw;
+}

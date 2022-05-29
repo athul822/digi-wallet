@@ -1,0 +1,39 @@
+import React, { useState } from "react";
+import styled from "@emotion/styled";
+
+const StatusView = ({ progress }) => {
+    const [status, setStatus] = useState();
+
+    const handleStyle = (stat) => {
+        switch (stat) {
+            case "Sent":
+                return `color: #FFFFFF; background-color: #09B66D `;
+                break;
+            case "Received":
+                return `color: #FF8A48; border: solid 1px #FF8A48`;
+                break;
+            case "Pending":
+                return `color: #0081FF; border: solid 1px #0081FF`;
+                break;
+            default:
+                break;
+        }
+    };
+
+    const Span = styled.span`
+        font-weight: 700;
+        font-size: 12.13px;
+        line-height: 14.93px;
+        padding: 4px 14px;
+        border-radius: 12px;
+        ${handleStyle(progress)}
+    `;
+
+    return (
+        <div>
+            <Span className="status-text">Sent</Span>
+        </div>
+    );
+};
+
+export default StatusView;

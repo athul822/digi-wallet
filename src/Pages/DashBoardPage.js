@@ -1,13 +1,13 @@
-import React from 'react'
-
+import React from "react";
+import DashBoardContainer from "../Components/DashBoard/DashBoardContainer";
+import TabHeader from "../Components/TabHeader/TabHeader";
 
 const DashBoardPage = () => {
-  return (
-    <div>
-       
+    return (
+        <>
+            <DashBoardContainer />
+        </>
+    );
+};
 
-    </div>
-  )
-}
-
-export default DashBoardPage
+export default DashBoardPage;

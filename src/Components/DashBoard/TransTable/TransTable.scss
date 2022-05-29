@@ -1,0 +1,32 @@
+.trans-table-item-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #4444;
+    padding: 10px 8px;
+    overflow: hidden;
+    .trans-table-profile{
+        display: flex;
+        align-items: center;
+        .profile-name-mail-container{
+            margin-left: 12px;
+        }
+        .profile-image{
+            background-color: beige;
+            height: 45px;
+            width: 45px;
+            border-radius: 50%;
+        }
+        .profile-name{
+            font-weight: 500;
+            color: #0081FF;
+            font-size: 14.93px;
+            line-height: 19.6px;
+        }
+        .profile-mail{
+            font-weight: 400;
+            font-size: 9.33px;
+            line-height: 18.67px;
+        }
+    }
+}

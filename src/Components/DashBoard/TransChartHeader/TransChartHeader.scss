@@ -1,0 +1,17 @@
+.trans-header{
+    display: flex;
+    justify-content: space-between;
+    select{
+        padding: 2px 4px;
+        border: 2px solid #8291A9;
+        border-radius: 6px;
+        font-family: "Poppins";
+        font-weight: 400;
+        font-size: 12.13px;
+        line-height: 18.67px;
+        color:#545454 ;
+    }
+}
+.trans-chart-container{
+    margin-top: 1rem;
+}
