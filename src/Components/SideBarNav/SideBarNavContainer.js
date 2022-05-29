@@ -23,12 +23,12 @@ const SideBarNavContainer = () => {
             <ul>
                 <Link to="/messages">
                     <li>
-                        <SideBarIcon iconName={icons.mail} badge={true} />
+                        <SideBarIcon iconName={icons.mail} badge={true} color={'warning'} />
                     </li>
                 </Link>
                 <Link to="/notifications">
                     <li>
-                        <SideBarIcon iconName={icons.notification} badge={true} />
+                        <SideBarIcon iconName={icons.notification} badge={true} color={'success'} />
                     </li>
                 </Link>
 
