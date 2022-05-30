@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./SideBarNav.scss";
 import { Link } from "react-router-dom";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
@@ -18,41 +18,55 @@ const SideBarNavContainer = () => {
         trend: <TrendingUpIcon color="disabled" fontSize="medium" />,
         settings: <SettingsOutlinedIcon color="disabled" fontSize="medium" />,
     };
+    const [clickedItem, setClickedItem] = useState(0);
+    const clickHandle =  (value) =>{
+        setClickedItem(value)
+    }
     return (
         <div className="side-nav-bar-container">
             <ul>
                 <Link to="/messages">
-                    <li>
-                        <SideBarIcon iconName={icons.mail} badge={true} color={'warning'} />
-                    </li>
+                    <div className={`${clickedItem == 1 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(1)}>
+                            <SideBarIcon iconName={icons.mail} badge={true} color={"warning"} />
+                        </li>
+                    </div>
                 </Link>
                 <Link to="/notifications">
-                    <li>
-                        <SideBarIcon iconName={icons.notification} badge={true} color={'success'} />
-                    </li>
+                    <div className={`${clickedItem == 2 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(2)}>
+                            <SideBarIcon iconName={icons.notification} badge={true} color={"success"} />
+                        </li>
+                    </div>
                 </Link>
 
                 <Link to="/">
-                    <div className="active">
-                        <li>
+                    <div className={`${clickedItem == 3 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(3)}>
                             <SideBarIcon iconName={icons.grid} badge={false} />
                         </li>
                     </div>
                 </Link>
                 <Link to="/transactions">
-                    <li>
-                        <SideBarIcon iconName={icons.renew} badge={false} />
-                    </li>
+                    <div className={`${clickedItem == 4 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(4)}>
+                            <SideBarIcon iconName={icons.renew} badge={false} />
+                        </li>
+                    </div>
                 </Link>
                 <Link to="/cost">
-                    <li>
-                        <SideBarIcon iconName={icons.trend} badge={false} />
-                    </li>
+                    <div className={`${clickedItem == 5 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(5)}>
+                            <SideBarIcon iconName={icons.trend} badge={false} />
+                        </li>
+                    </div>
                 </Link>
                 <Link to="/settings">
-                    <li>
-                        <SideBarIcon iconName={icons.settings} badge={false} />
-                    </li>
+                    <div className={`${clickedItem == 6 ? "active" : ""}`}>
+                        <li onClick={()=>clickHandle(6)}>
+                            <SideBarIcon iconName={icons.settings} badge={false} />
+                        </li>
+                    </div>
                 </Link>
             </ul>
         </div>
