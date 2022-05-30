@@ -32,7 +32,7 @@ const StatusView = ({ progress }) => {
 
     return (
         <div className="status-view-cont">
-            <Span className="status-text">{status}</Span>
+            <Span className="status-text">{progress}</Span>
         </div>
     );
 };

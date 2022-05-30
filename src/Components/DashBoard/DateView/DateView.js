@@ -21,7 +21,7 @@ const DateView = ({ date }) => {
       <span className="date-icon">
         <CalendarTodayIcon fontSize="small" />
       </span>
-      <span className="date-text">{dateToShow}</span>
+      <span className="date-text">{formatDate(date)}</span>
     </div>
   );
 };

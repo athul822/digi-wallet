@@ -9,8 +9,8 @@ const TransTableProfile = ({ name, mail }) => {
                 <img src="" alt="" />
             </div>
             <div className="profile-name-mail-container">
-                <p className="profile-name">{userName}</p>
-                <p className="profile-mail">{userEmail}</p>
+                <p className="profile-name">{name}</p>
+                <p className="profile-mail">{mail}</p>
             </div>
         </div>
     );

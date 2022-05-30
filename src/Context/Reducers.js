@@ -6,15 +6,18 @@ const contextReducer = (state, action) => {
       console.log("reduced");
       return { ...state, userData: action.payload };
     case "DAILY":
-      console.log(action.payload);
-      return { ...state, userData: action.payload.sort(byName) };
+      let data = action.payload.filter((item)=>{
+      return (new Date() - new Date(item.date))/(1000*60*60*24) > 1
+      })
+      //console.log(data)
+      return { ...state, userData: data.sort(byName) };
     case "WEEKLY":
       console.log("weekly");
       return { ...state, userData: action.payload.sort(byDay) };
 
     case "MONTHLY":
       console.log("monthly");
-      return { ...state, userData: action.payload };
+      return { ...state, userData: action.payload.sort(byName) };
   }
 };
 

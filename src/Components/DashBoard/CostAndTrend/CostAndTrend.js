@@ -23,7 +23,7 @@ const CostAndTrend = ({ costAmount, trend }) => {
                     </span>
                 )}
             </Span>
-            <p className="cost-text">${cost}</p>
+            <p className="cost-text">${costAmount}</p>
         </div>
     );
 };
