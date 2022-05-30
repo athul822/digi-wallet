@@ -60,13 +60,13 @@ const BankCard = ({ color, header, amount, debitCard,popUp }) => {
                     <BankCardHeader header={header} debitCard />
                     <div>
                         <div className="chip"></div>
-                        <div>
+                        <div className='debit-card-num'>
                             <p>1234 5678 9012 3456</p>
-                            <p>0123</p>
+                            <span>0123</span>
                         </div>
                     </div>
                     <div>
-                        <p>MOHSIN JAVED</p>
+                        <p className="card-name">MOHSIN JAVED</p>
                     </div>
                 </>
             ) : (

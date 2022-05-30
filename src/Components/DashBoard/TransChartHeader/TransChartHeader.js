@@ -11,7 +11,7 @@ const TransChartHeader = ({ header, isTransaction }) => {
 
     
   const { state, dispatch } = TransactionDataState();
-  const [filterValue, setFilterValue] = useState("daily");
+  const [filterValue, setFilterValue] = useState("DAILY");
   
   const handleChange = (e) => {
     //console.log(e.value);

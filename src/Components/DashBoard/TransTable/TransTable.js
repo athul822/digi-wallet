@@ -4,10 +4,8 @@ import { TransactionDataState } from "../../../Context/Context";
 import "./TransTable.scss";
 import TransTableItem from "./TransTableItem";
 
-
-
 const TransTable = () => {
-    const {state ,dispatch} = TransactionDataState();
+    const { state, dispatch } = TransactionDataState();
     //console.log(state.userData);
     //console.log(TransactionDataState());
     //const [userData, setUserData] = useState([]);
@@ -24,10 +22,14 @@ const TransTable = () => {
 
     return (
         <div className="trans-table">
-            {state.userData.map((item, index) => {
-                console.log(item);
-                return index < 5 ? <TransTableItem key={index} user={item} /> : <></>;
-            })}
+            {state.userData.length > 0 ? (
+                state.userData.map((item, index) => {
+                    console.log(item);
+                    return index < 5 ? <TransTableItem key={index} user={item} /> : <></>;
+                })
+            ) : (
+                <>No Transactions today</>
+            )}
         </div>
     );
 };
