@@ -18,7 +18,7 @@ const SideBarNavContainer = () => {
         trend: <TrendingUpIcon color="disabled" fontSize="medium" />,
         settings: <SettingsOutlinedIcon color="disabled" fontSize="medium" />,
     };
-    const [clickedItem, setClickedItem] = useState(0);
+    const [clickedItem, setClickedItem] = useState(3);
     const clickHandle =  (value) =>{
         setClickedItem(value)
     }
