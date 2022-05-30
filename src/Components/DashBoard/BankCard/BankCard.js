@@ -22,10 +22,12 @@ const style = {
     p: 4,
 };
 
-const BankCard = ({ color, header, amount, debitCard }) => {
+const BankCard = ({ color, header, amount, debitCard,popUp }) => {
     const [open, setOpen] = useState(false);
     const handleClick = () => {
-        !open &&  setOpen(true);
+        popUp ? 
+        !open &&  setOpen(true)
+        : setOpen(false)
        
     }
 
