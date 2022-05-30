@@ -6,7 +6,7 @@ const TransactionData = createContext()
 const Context = ({children}) => {
 
     const [ state , dispatch ] = useReducer(contextReducer,{
-        userData : [],
+        userData : []
     })
 
   return (

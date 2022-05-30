@@ -8,9 +8,9 @@ import TransTableItem from "./TransTableItem";
 
 const TransTable = () => {
     const {state ,dispatch} = TransactionDataState();
-    console.log(state.userData);
-    console.log(TransactionDataState());
-    const [userData, setUserData] = useState([]);
+    //console.log(state.userData);
+    //console.log(TransactionDataState());
+    //const [userData, setUserData] = useState([]);
     useEffect(() => {
         axios.get("https://mocki.io/v1/94bece71-5d3c-4a80-8fa4-39595d34b1b4").then((resp) => {
             dispatch({
@@ -25,6 +25,7 @@ const TransTable = () => {
     return (
         <div className="trans-table">
             {state.userData.map((item, index) => {
+                console.log(item);
                 return index < 5 ? <TransTableItem key={index} user={item} /> : <></>;
             })}
         </div>

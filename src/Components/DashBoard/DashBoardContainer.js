@@ -19,7 +19,7 @@ const DashBoardContainer = () => {
             <div className="trans-chart-container">
                 <div className="trans-container">
                     <div className="trans-header-container">
-                        <TransChartHeader header={"Transaction History"} />
+                        <TransChartHeader header={"Transaction History"} isTransaction />
                     </div>
                     <div className="trans-table-container">
                         <TransTable />
