@@ -16,7 +16,7 @@ const TransTable = () => {
                 payload: resp.data,
             });
             //setUserData(resp.data);
-            //console.log(resp.data);
+            console.log(resp.data);
         });
     }, []);
 

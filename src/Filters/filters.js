@@ -12,5 +12,6 @@ export const byName = (a,b) =>{
 }
 
 export const byDay = (a,b) =>{
-    return new Date(a.date).valueOf() - new Date(b.date).valueOf();
+    return new Date(b.date).valueOf() - new Date(a.date).valueOf();
 }
+
