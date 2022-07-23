@@ -1,8 +1,6 @@
 import React, { createContext , useContext, useReducer } from 'react'
 import contextReducer from './Reducers'
 
-
-const TransactionData = createContext()
 const Context = ({children}) => {
 
     const [ state , dispatch ] = useReducer(contextReducer,{
@@ -18,6 +16,9 @@ const Context = ({children}) => {
 }
 
 export default Context
+
+
+const TransactionData = createContext()
 
 export const TransactionDataState = () =>{
     return useContext(TransactionData)

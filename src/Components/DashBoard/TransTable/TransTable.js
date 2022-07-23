@@ -28,7 +28,7 @@ const TransTable = () => {
                     return index < 5 ? <TransTableItem key={index} user={item} /> : <></>;
                 })
             ) : (
-                <>No Transactions today</>
+                <p>No Transactions today</p>
             )}
         </div>
     );

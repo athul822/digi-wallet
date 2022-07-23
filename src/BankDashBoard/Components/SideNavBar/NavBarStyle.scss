@@ -1,0 +1,50 @@
+//APPBAR
+#root > div > div > header{
+    background-color: #FFFF;
+    color: #404e67;
+}
+
+//Drawer Body
+#root > div > div > div > div{
+    background-color: #404e67;
+    color: #dcdcdc;
+}
+
+#root > div > div > header > div > button > svg{
+    color: #404e67;
+}
+
+#root > div > div > div > div > ul{
+    span{
+        font-size: 14px;
+        font-family: 'Poppins';
+    }
+   
+}
+#root > div > div > div > div > ul{
+    svg{
+        color: #dcdcdc;
+    }
+
+}
+#root > div > div > div > div > ul{
+    li {
+       border-left: #404e67 3px solid;
+    }
+
+}
+#root > div > div > div > div > ul{
+    li:hover {
+       border-left: #fe8a7d 3px solid;
+    }
+
+}
+.css-1r9jet7{
+    button{
+        svg{
+            color: #dcdcdc;
+        }
+    }
+}
+   
+   

@@ -9,10 +9,35 @@ import NotificationPage from "./Pages/NotificationPage";
 import TransactionsPage from "./Pages/TransactionsPage";
 import CostPage from "./Pages/CostPage";
 import SettingsPage from "./Pages/SettingsPage";
+import SideNavBar from "./BankDashBoard/Components/SideNavBar/SideNavBar";
+import AddBank from "./BankDashBoard/Components/AddBank/AddBank";
+import AddUser from "./BankDashBoard/Components/AddUser/AddUser";
 
 const App = () => {
+   const nav = useNavigate()
+   
     return (
+       
+       
         <div className="layout">
+          
+          <SideNavBar />
+         <div>
+            <Routes>
+            <Route path="/add_bank" element={<AddBank />} /> 
+            <Route path="/add_user" element={<AddUser />} /> 
+            </Routes>
+         </div>
+         
+
+
+
+
+
+
+            
+       
+        {/* <div className="layout">
             <div className="container">
                 <BrowserRouter>
                     <SideBarNavContainer />
@@ -27,14 +52,16 @@ const App = () => {
                                 <Route path="/notifications" element={<NotificationPage />} />
                                 <Route path="/transactions" element={<TransactionsPage />} />
                                 <Route path="/cost" element={<CostPage />} />
-                                <Route path="/settings" element={<SettingsPage />} />
-                                
+                                <Route path="/settings" element={<SettingsPage />} />                          
                             </Routes>
                         </div>
                     </div>
                 </BrowserRouter>
             </div>
+        </div> */}
+
         </div>
+      
     );
 };
 
