@@ -1,17 +1,16 @@
-import { Box } from '@mui/system'
-import React from 'react'
-import { DrawerHeader } from '../SideNavBar/SideNavBar'
+import { Dashboard } from "@mui/icons-material";
+import { Box } from "@mui/system";
+import React from "react";
+import DashBoard from "../DashBoard/DashBoard";
+import { DrawerHeader } from "../SideNavBar/SideNavBar";
+import UsersTableData from "../UsersList/UsersTableData";
 
 const AddUser = () => {
-  return (
-    <div>
-        <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
-                <DrawerHeader />
-               ADD USER
-            </Box>
-
+    return (
+        <div>
+        <DashBoard />
         </div>
-  )
-}
+    );
+};
 
-export default AddUser
+export default AddUser;

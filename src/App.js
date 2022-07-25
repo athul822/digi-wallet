@@ -12,20 +12,26 @@ import SettingsPage from "./Pages/SettingsPage";
 import SideNavBar from "./BankDashBoard/Components/SideNavBar/SideNavBar";
 import AddBank from "./BankDashBoard/Components/AddBank/AddBank";
 import AddUser from "./BankDashBoard/Components/AddUser/AddUser";
+import UsresList from "./BankDashBoard/Components/UsersList/UsresList";
+import EnhancedTable from "./BankDashBoard/Components/UsersList/UsresList";
+import DashBoard from "./BankDashBoard/Components/DashBoard/DashBoard";
 
 const App = () => {
-   const nav = useNavigate()
+
    
     return (
        
        
-        <div className="layout">
+        <div className="layout" style={{width:'100%',height:'100%'}}>
           
           <SideNavBar />
-         <div>
+         <div className="routes" style={{width:'100%'}}>
             <Routes>
             <Route path="/add_bank" element={<AddBank />} /> 
-            <Route path="/add_user" element={<AddUser />} /> 
+            <Route path="/add_user" element={<AddUser />} />
+            <Route path="/users" element={<EnhancedTable />} /> 
+            <Route path="/" element={<DashBoard />} />
+
             </Routes>
          </div>
          

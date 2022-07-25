@@ -20,11 +20,10 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import "./NavBarStyle.scss";
-import { AccountBalance, AddBusiness, ExpandLess, ExpandMore, Person, PersonAddAlt } from "@mui/icons-material";
+import { AccountBalance, AddBusiness, Dashboard, ExpandLess, ExpandMore, Person, PersonAddAlt } from "@mui/icons-material";
 import { Collapse } from "@mui/material";
 import AddBank from "../AddBank/AddBank";
 import { Route, Routes, BrowserRouter, useNavigate } from "react-router-dom";
-
 
 const drawerWidth = 240;
 
@@ -92,10 +91,10 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== "open" 
 }));
 
 const SideNavBar = () => {
-    const nav = useNavigate()
+    const nav = useNavigate();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
-    
+
     const handleDrawerOpen = () => {
         setOpen(true);
     };
@@ -113,15 +112,17 @@ const SideNavBar = () => {
         setOpenSubUser(!openSubUser);
     };
     const handleSubClick = (i) => {
-        if(i=='ab'){
-            nav('/add_bank')
-        } else if (i=='au'){
-            nav('/add_user')
-        }   
+        if (i == "ab") {
+            nav("/add_bank");
+        } else if (i == "au") {
+            nav("/add_user");
+        } else if (i == "us") {
+            nav("/users");
+        }
     };
-    
+
     return (
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex",color:"black" }}>
             <CssBaseline />
             <AppBar position="fixed" open={open}>
                 <Toolbar>
@@ -150,63 +151,72 @@ const SideNavBar = () => {
                 </DrawerHeader>
                 <Divider />
                 <List>
-                   
-                  <li>
-                    <ListItemButton sx={!openSubBank ? {backgroundColor:"#384c6d"} : {}} onClick={handleClickBank}>
-                        <ListItemIcon>
-                            <AccountBalance />
-                        </ListItemIcon>
-                        <ListItemText primary="Bank" sx={{fontSize:25}} />
-                        {openSubBank ? <ExpandMore /> : <ExpandLess />}
-                    </ListItemButton>
-                    <Collapse in={!openSubBank} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }} onClick={()=>handleSubClick('ab')}>
-                                <ListItemIcon>
-                                    <AddBusiness />
-                                </ListItemIcon>
-                                <ListItemText primary="Add Bank" />
-                            </ListItemButton>
-                            <ListItemButton sx={{ pl: 4 }} onClick={()=>handleSubClick('ab')}>
-                                <ListItemIcon>
-                                    <AccountBalance />
-                                </ListItemIcon>
-                                <ListItemText primary="Bank" />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
+                    <li>
+                        <ListItemButton sx={{ pr: 4 }} onClick={() => nav('/')}>
+                            <ListItemIcon >
+                                <Dashboard />
+                                <ListItemText  primary="Dashboard" sx={{ fontSize: 25,ml:4 }} />
+                            </ListItemIcon>
+                        </ListItemButton>
+                    </li>
+                    <li>
+                        <ListItemButton
+                            sx={!openSubBank ? { backgroundColor: "#384c6d" } : {}}
+                            onClick={handleClickBank}
+                        >
+                            <ListItemIcon >
+                                <AccountBalance />
+                            </ListItemIcon>
+                            <ListItemText primary="Bank" sx={{ fontSize: 25 }} />
+                            {openSubBank ? <ExpandMore /> : <ExpandLess />}
+                        </ListItemButton>
+                        <Collapse in={!openSubBank} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 4 }} onClick={() => handleSubClick("ab")}>
+                                    <ListItemIcon>
+                                        <AddBusiness />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Add Bank" />
+                                </ListItemButton>
+                                <ListItemButton sx={{ pl: 4 }} onClick={() => handleSubClick("ab")}>
+                                    <ListItemIcon>
+                                        <AccountBalance />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Bank" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
                     </li>
 
                     <li>
-                    <ListItemButton onClick={handleClickUser}>
-                        <ListItemIcon>
-                            <Person />
-                        </ListItemIcon>
-                        <ListItemText primary="User" />
-                        {openSubUser ? <ExpandMore /> : <ExpandLess />}
-                    </ListItemButton>
-                    <Collapse in={!openSubUser} timeout="auto" unmountOnExit>
-                        <List component="div" disablePadding>
-                            <ListItemButton sx={{ pl: 4 }} onClick={()=>handleSubClick('au')}>
-                                <ListItemIcon>
-                                    <PersonAddAlt />
-                                </ListItemIcon>
-                                <ListItemText primary="Add User" />
-                            </ListItemButton>
-                            <ListItemButton sx={{ pl: 4 }} onClick={handleSubClick}>
-                                <ListItemIcon>
-                                    <Person />
-                                </ListItemIcon>
-                                <ListItemText primary="User" />
-                            </ListItemButton>
-                        </List>
-                    </Collapse>
+                        <ListItemButton onClick={handleClickUser}>
+                            <ListItemIcon>
+                                <Person />
+                            </ListItemIcon>
+                            <ListItemText primary="User" />
+                            {openSubUser ? <ExpandMore /> : <ExpandLess />}
+                        </ListItemButton>
+                        <Collapse in={!openSubUser} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 4 }} onClick={() => handleSubClick("au")}>
+                                    <ListItemIcon>
+                                        <PersonAddAlt />
+                                    </ListItemIcon>
+                                    <ListItemText primary="Add User" />
+                                </ListItemButton>
+                                <ListItemButton sx={{ pl: 4 }} onClick={() => handleSubClick("us")}>
+                                    <ListItemIcon>
+                                        <Person />
+                                    </ListItemIcon>
+                                    <ListItemText primary="User" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
                     </li>
                 </List>
                 <Divider />
             </Drawer>
         </Box>
-
     );
 };
 
